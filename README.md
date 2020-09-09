@@ -1,5 +1,5 @@
 <p align="center">
-        <img src="res/homebridge-lib.png" alt="PNG" height="300px" />
+        <img src="homebridge-lib.png" alt="PNG" height="300px" />
 </p>
 
 
