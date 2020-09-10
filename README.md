@@ -145,7 +145,7 @@ nano docker-compose.yml
 The contents of this file should be:
 
 ```yml
-ersion: '2'
+version: '2'
 services:
   homebridge:
     image: oznu/homebridge:raspberry-pi
@@ -154,13 +154,14 @@ services:
     container_name: homebridge
     volumes:
       - ./homebridge:/homebridge
-      - ./config:/homebridge/config
+      - ./homebridge/config:/config
     environment:
       - TZ=Europe/Madrid
       - PGID=1000
       - PUID=1000
       - HOMEBRIDGE_CONFIG_UI=1
       - HOMEBRIDGE_CONFIG_UI_PORT=9591
+
 ```
 * The ```restart: always``` line instructs docker to setup the container so that it that will automatically start again if the Raspberry Pi is rebooted, or if the container unexpectedly quits or crashes.
 * The ```network_mode: host``` line instructs docker to share the Raspberry Pi's network with the container, allowing your iOS device to find the Homebridge accessory.
