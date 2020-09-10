@@ -7,7 +7,7 @@ services:
     container_name: homebridge
     volumes:
       - ./homebridge:/homebridge
-      - ./config:/homebridge/config
+      - ./homebridge/config:/config
     environment:
       - TZ=Europe/Madrid
       - PGID=1000
