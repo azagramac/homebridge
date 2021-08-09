@@ -1,20 +1,18 @@
 version: '2'
 services:
   homebridge:
-    image: oznu/homebridge:raspberry-pi
+    image: oznu/homebridge
     restart: always
     network_mode: host
     container_name: homebridge
-    hostname: homebridge
     ports:
       - "9590:9590/tcp"
     volumes:
-      - '/home/pi/homebridge:/homebridge'
-      - '/home/pi/homebridge/config:/config'
+      - '/root/docker/homebridge:/homebridge'
+      - '/root/docker/homebridge/config:/config'
     environment:
       - TZ=Europe/Madrid
       - PGID=1000
       - PUID=1000
       - HOMEBRIDGE_CONFIG_UI=1
       - HOMEBRIDGE_CONFIG_UI_PORT=9590
-
