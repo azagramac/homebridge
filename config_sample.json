@@ -1,0 +1,45 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "XX:XX:XX:XX:XX:XX",
+        "port": 51045,
+        "pin": "123-45-567"
+    },
+    "accessories": [],
+    "platforms": [
+        {
+            "name": "Config",
+            "port": 9590,
+            "auth": "form",
+            "theme": "dark-mode",
+            "tempUnits": "c",
+            "lang": "en",
+            "platform": "config"
+        },
+        {
+            "name": "eWeLink",
+            "username": "YOUR_MAIL",
+            "password": "YOUR_PASS_BASE64",
+            "mode": "auto",
+            "countryCode": "+34",
+            "platform": "eWeLink"
+        },
+        {
+            "tvs": [
+                {
+                    "name": "Televisión",
+                    "ip": "IP_TV",
+                    "mac": "XX:XX:XX:XX:XX:XX",
+                    "soundoutput": "speaker",
+                    "tvsource": "tv:dvbt",
+                    "applications": [
+                        {
+                            "title": "Netflix"
+                        }
+                    ]
+                }
+            ],
+            "platform": "BraviaPlatform"
+        }
+    ]
+}
