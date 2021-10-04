@@ -3,7 +3,10 @@
         "name": "Homebridge",
         "username": "XX:XX:XX:XX:XX:XX",
         "port": 51045,
-        "pin": "123-45-567"
+        "pin": "012-34-567",
+        "bind": [
+            "eth0"
+        ]
     },
     "accessories": [],
     "platforms": [
@@ -18,8 +21,8 @@
         },
         {
             "name": "eWeLink",
-            "username": "YOUR_MAIL",
-            "password": "YOUR_PASS_BASE64",
+            "username": "yourMail@domain.com",
+            "password": "YourPass",
             "mode": "auto",
             "countryCode": "+34",
             "platform": "eWeLink"
@@ -28,7 +31,7 @@
             "tvs": [
                 {
                     "name": "Televisión",
-                    "ip": "IP_TV",
+                    "ip": "192.168.1.15",
                     "mac": "XX:XX:XX:XX:XX:XX",
                     "soundoutput": "speaker",
                     "tvsource": "tv:dvbt",
