@@ -8,6 +8,7 @@ services:
     container_name: homebridge
     ports:
       - "9590:9590/tcp"
+      - "8999:8999/tcp"
     volumes:
       - '/root/docker/homebridge:/homebridge'
       - '/root/docker/homebridge/config:/config'
@@ -17,3 +18,4 @@ services:
       - PUID=1000
       - HOMEBRIDGE_CONFIG_UI=1
       - HOMEBRIDGE_CONFIG_UI_PORT=9590
+      - PACKAGES=ffmpeg
